@@ -28,7 +28,7 @@
       <fieldset class="login">
          <legend>Connexion</legend>
          <p>Pour accéder aux information du site, renseignez votre UserName et votre Password</p>
-         <div class="">
+         <div class="login-connexion">
            <p>
               <label for="">UserName :</label>
               <input type="text" name="login">
@@ -38,7 +38,10 @@
               <input type="password" name="password">
            </p>
          </div>
-         <input type="submit" name="connexion" value="Connexion">
+         <div class="center">
+           <input type="submit" name="connexion" value="Connexion">
+         </div>
+         <a href="login/forgot_password.php">Vous avez oublié votre mot de passe ?</a>
       </fieldset>
    </form>
    <br>
