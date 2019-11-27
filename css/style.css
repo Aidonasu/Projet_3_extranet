@@ -1,0 +1,133 @@
+header,h1,h2,.center{
+  text-align: center;
+}
+
+header p{
+  text-align: center;
+  margin:0;
+}
+
+fieldset{
+  border-color:red;
+}
+
+p{
+  text-align: justify;
+}
+
+.mobile_description{
+  text-align: left;
+  padding: 0.5em;
+}
+
+a{
+  text-decoration: none;
+  color:black;
+}
+
+.link{
+  text-align: end;
+}
+
+.link a, fieldset a{
+  border: 2px solid red;
+  border-radius: 12px;
+  padding: 5px;
+}
+
+div img{
+  width: 320px;
+  height: 240px;
+}
+
+.mobile_text{
+  padding:9px;
+}
+
+.container{
+  padding: 0;
+  max-width: 100%;
+  padding-bottom: 15px;
+}
+
+.acteurs{
+  padding: 8px 7px 15px 7px;
+  margin-top: 10px;
+}
+
+.account{
+  padding:0;
+  text-align: center;
+}
+
+.account li{
+  display:inline-block;
+  width: 7em;
+}
+
+footer ul{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+footer ul li:first-child{
+  border-left: 2px solid red;
+  border-right: 2px solid red;
+  padding:0 5px;
+  margin-right: 5px;
+}
+
+footer ul li:last-child{
+  border-right: 2px solid red;
+  padding-right:5px;
+}
+
+label {
+  vertical-align: top;
+  display: inline-block;
+  width: 5em;
+}
+
+@media all and (min-width: 768px) {
+
+  header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header p{
+    margin-bottom: 5em;
+    margin-right: 3em;
+  }
+
+  .login div{
+    display:flex;
+    justify-content:space-around;
+  }
+
+  .login div input{
+    width: 19em;
+  }
+
+  div img{
+    height: 174px;
+    margin-top: 2rem;
+    margin-right: 1rem;
+  }
+
+  .tablet-acteurs{
+    display: flex;
+    align-items: center;
+    height: 10rem;
+  }
+}
+
+@media all and (min-width: 1024px){
+  body{
+    margin: 0 auto;
+    max-width: 60%;
+  }
+}
