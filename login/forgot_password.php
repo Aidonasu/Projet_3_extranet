@@ -14,7 +14,10 @@
       <img src="../logo/GBAF.png" alt="logo1">
     </header>
     <main>
-      <form class="" action="valid-connexion.php" method="post">
+      <form class="" action="valid_forgot_password.php" method="post">
+        <?php if (isset($_GET['error'])): ?>
+        <p>Mauvais UserName !</p>
+        <?php endif; ?>
       <fieldset class="login">
          <legend>Récupération par nom d'utilisateur</legend>
          <div class="login-connexion">
