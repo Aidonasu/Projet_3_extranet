@@ -85,6 +85,20 @@ div img{
   width: 7em;
 }
 
+.hand{
+  margin:0;
+}
+
+.hand li{
+  display: inline-block;
+  font-size: 2.5em;
+}
+
+.comments{
+  display: flex;
+  align-items: center;
+}
+
 /*************FOOTER****************/
 
 footer ul{
