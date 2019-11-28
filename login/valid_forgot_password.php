@@ -1,15 +1,14 @@
 <?php
-   session_start();
 
    $user = htmlspecialchars($_POST['user']);
-
-   var_dump($user);
+   $reponse = htmlspecialchars($_POST['reponse']);
+   $question = htmlspecialchars($_POST['question']);
 
    /* connection à la base de données */
    $pdo = new PDO('mysql:host=localhost;dbname=extranet-gbaf', 'root', 'f9m2zlri');
    $pdo->exec('SET NAMES UTF8');
-   $query = $pdo->prepare("SELECT username,question FROM account where username=?");
-   $query->execute([$user]);
+   $query = $pdo->prepare("SELECT id_user,username,question,reponse FROM account where username=? and question=? and reponse=?");
+   $query->execute([$user,$question,$reponse]);
 
 /*On vérifie si les informations données sont corrects, si oui connexion on profil admin*/
    if($results = $query->fetch(PDO::FETCH_ASSOC)){
@@ -17,11 +16,10 @@
      // Comparaison du pass envoyé via le formulaire avec la base
      //$isPasswordCorrect = password_verify($_POST['password'], $results['password']);
 
-     if($user = $results['username']){
+     if($user = $results['username'] || $question = $results['question'] || $reponse = $results['reponse']){
        sleep(1);
-      ?>
-      <input type="text" name="question" value="<?=$results['question'];?>">
-      <?php
+       $id = $results['id_user'];
+      header("Location:change_password.php?id_user=$id");
        exit();
      }
    }
