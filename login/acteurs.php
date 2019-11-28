@@ -39,7 +39,18 @@
          </div>
          <h2><?=$results['acteur'];?></h2>
          <p class="mobile_description"><?=$results['description'];?></p>
-         <a href="index.php">Retour</a>
+
+				 <fieldset>
+				 	<legend>Commentaires</legend>
+					<div class="comments">
+						<a href="#">Nouveau commentaire</a>
+						<ul class="hand">
+							<li><i class="fas fa-thumbs-up"></i></li>
+							<li><i class="fas fa-thumbs-down"></i></li>
+						</ul>
+					</div>
+				 </fieldset>
+				 <a href="index.php">Retour</a>
     </main>
     <footer>
       <ul>
