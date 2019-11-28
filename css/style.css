@@ -9,8 +9,22 @@ header p{
   margin:0;
 }
 
+/*************FIELDSIET + FORMULAIRE*************/
 fieldset{
   border-color:red;
+}
+
+.form-input{
+  display: block;
+  width:21em;
+}
+
+.forgot p{
+  text-align: left;
+}
+
+.forgot select{
+  width: 21.5em;
 }
 
 p{
@@ -90,12 +104,6 @@ footer ul li:first-child{
 footer ul li:last-child{
   border-right: 2px solid red;
   padding-right:5px;
-}
-
-label {
-  vertical-align: top;
-  display: inline-block;
-  width: 5em;
 }
 
 @media all and (min-width: 768px) {
