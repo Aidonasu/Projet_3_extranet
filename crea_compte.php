@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="fontawesome5/web-fonts-with-css/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -21,35 +25,47 @@
             <fieldset>
                 <legend>Créer un compte</legend>
                 <p>
-                    <label for="login">UserName(*) :</label>
-                    <input type="text" name="login" required>
+                    <label for="login">UserName </label>
+                    <input class="form-input" type="text" name="login" required>
                 </p>
                 <p>
-                    <label for="password">Password(*) :</label>
-                    <input id="mdp" type="password" name="password" required>
+                    <label for="password">Password </label>
+                    <input class="form-input" type="password" name="password" id="password" required>
+                    <label for="checkbox">
+                        <input type="checkbox" id="checkbox">
+                        Afficher le mot de passe
+                    </label>
                 </p>
             </fieldset>
             <fieldset>
                 <legend>Détails</legend>
                 <p class="ligne">
-                    <label for="nom">Nom(*) :</label>
-                    <input id="nom" type="text" name="nom" required>
+                    <label for="nom">Nom </label>
+                    <input class="form-input" type="text" name="nom" required>
                 </p>
                 <p>
-                    <label for="prenom">Prénom(*) :</label>
-                    <input id="prenom" type="text" name="prenom" required>
+                    <label for="prenom">Prénom </label>
+                    <input class="form-input" type="text" name="prenom" required>
                 </p>
                 <p>
-                    <label for="question">Question secrète(*) :</label>
-                    <input id="prenom" type="text" name="question" required>
+                    <label for="question">Question secrète </label>
+                    <select class="form-input form-select" name="question" required>
+                      <option value="" selected>--- Selectionner une question ---</option>
+                      <option value="Quel est le nom de mon premier animal domestique ?">Quel est le nom de mon premier animal domestique ?
+                      <option value="Quel est le nom du pays que j’aimerais le plus visiter ?">Quel est le nom du pays que j’aimerais le plus visiter ?
+                      <option value="Quel est le nom du personnage historique que j’admire le plus ?">Quel est le nom du personnage historique que j’admire le plus ?
+                      <option value="Quelle est la  marque du premier véhicule que j’ai conduit ?">Quelle est la  marque du premier véhicule que j’ai conduit ?
+                      <option value ="Quelle est votre couleur préférée ?">Quelle est votre couleur préférée ?</option>
+                      <option value ="Quelle est votre équipe sportive favorite ?">Quelle est votre équipe sportive favorite ?</option>
+                      <option value ="Quel était le métier de votre grand-père ?">Quel était le métier de votre grand-père ?</option>
+                    </select>
                 </p>
                 <p>
-                    <label for="reponse">Réponse(*) :</label>
-                    <input id="prenom" type="text" name="reponse" required>
+                    <label for="reponse">Réponse </label>
+                    <input class="form-input" type="text" name="reponse" required>
                 </p>
 
             </fieldset>
-            <p>(*) Champs obligatoires</p>
             <ul class="link-list">
                 <li>
                     <input id="submit" type="submit" class="button button-primary" value="Créer le compte">
@@ -64,6 +80,7 @@
             <li>Contact</li>
         </ul>
     </footer>
+    <script type="text/javascript" src="../js/reveal_code.js"></script>
 </body>
 
 </html>
