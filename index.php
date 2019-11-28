@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="fontawesome5/web-fonts-with-css/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
@@ -28,16 +32,18 @@
       <fieldset class="login">
          <legend>Connexion</legend>
          <p>Pour accéder aux information du site, renseignez votre UserName et votre Password</p>
-         <div class="login-connexion">
            <p>
-              <label for="">UserName :</label>
-              <input type="text" name="login">
+              <label for="">UserName</label>
+              <input class="form-input" type="text" name="login" required>
            </p>
            <p>
-              <label for="">Password :</label>
-              <input type="password" name="password">
+              <label for="">Password</label>
+              <input class="form-input" type="password" name="password" id="password" required>
+              <label for="checkbox">
+                  <input type="checkbox" id="checkbox">
+                  Afficher le mot de passe
+              </label>
            </p>
-         </div>
          <div class="center">
            <input type="submit" name="connexion" value="Connexion">
          </div>
@@ -57,5 +63,6 @@
         <li>Contact</li>
       </ul>
     </footer>
+    <script type="text/javascript" src="js/reveal_code.js"></script>
   </body>
 </html>
