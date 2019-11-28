@@ -80,7 +80,7 @@
             <li>Contact</li>
         </ul>
     </footer>
-    <script type="text/javascript" src="../js/reveal_code.js"></script>
+    <script type="text/javascript" src="js/reveal_code.js"></script>
 </body>
 
 </html>
