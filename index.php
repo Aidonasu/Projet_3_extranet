@@ -24,6 +24,10 @@
              echo 'Votre compte a bien été créer ! Félicitation !';
              sleep(1);
            }
+           elseif ($_GET['sucess']==2) {
+             echo 'Vote mot de passe a été modifié !';
+             sleep(1);
+           }
          }?></p>
          <?php if (isset($_GET['error'])): ?>
          <p>Mauvais identifiants !</p>
