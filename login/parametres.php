@@ -23,7 +23,7 @@
   </head>
   <body>
     <header>
-      <img src="../logo/GBAF.png" alt="logo1">
+      <a href="index.php"><img src="../logo/GBAF.png" alt="logo1"></a>
 			<p>
 				<i class="fas fa-user"></i> <?=$_SESSION['nom'];?> <?=$_SESSION['prenom'];?>
 				<br><br>
@@ -80,11 +80,15 @@
 							<input class="form-input" type="text" name="reponse" required>
 					</p>
 					<input type="hidden" name="account" value="<?=$id;?>">
-					<input type="submit" name="modifier" value="Modifier">
+					<ul class="account">
+							<li>
+									<input type="submit" name="modifier" value="Modifier">
+							</li>
+							<li><a href="index.php" class="button button-cancel">Annuler</a></li>
+					</ul>
+
 				</fieldset>
 			</form>
-
-      <a href="index.php">Retour</a>
     </main>
     <footer>
       <ul>
