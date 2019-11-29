@@ -15,7 +15,7 @@
   </head>
   <body>
     <header>
-      <img src="logo/GBAF.png" alt="logo1">
+      <a href="index.php"><img src="logo/GBAF.png" alt="logo1"></a>
     </header>
     <main>
       <p name="sucess"><?php
