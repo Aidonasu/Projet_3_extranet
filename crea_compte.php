@@ -16,7 +16,7 @@
 
 <body>
     <header>
-        <img src="logo/GBAF.png" alt="logo1">
+        <a href="index.php"><img src="logo/GBAF.png" alt="logo1"></a>
     </header>
     <main>
         <h2><i class="fas fa-university"></i> Création d'un compte utilisateur</h2>
@@ -66,7 +66,7 @@
                 </p>
 
             </fieldset>
-            <ul class="link-list">
+            <ul class="account">
                 <li>
                     <input id="submit" type="submit" class="button button-primary" value="Créer le compte">
                 </li>
