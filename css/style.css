@@ -45,7 +45,7 @@ a{
   text-align: end;
 }
 
-.link a, fieldset a{
+.link a, fieldset a, .like_dislike{
   border: 2px solid red;
   border-radius: 12px;
   padding: 5px;
@@ -89,18 +89,32 @@ div img{
   border: none
 }
 
-.hand{
-  margin:0;
+/************COMMENTAIRES**********/
+
+i.fa-thumbs-up{
+  margin-right:9px;
 }
 
-.hand li{
+.like_dislike li{
   display: inline-block;
-  font-size: 2.5em;
+}
+
+.like_dislike a{
+  border:none;
+}
+
+.hand{
+  font-size: 1.5em;
 }
 
 .comments{
   display: flex;
   align-items: center;
+  justify-content: space-around;
+}
+
+.comments a:nth-child(1){
+  padding:9px;
 }
 
 /*************FOOTER****************/
