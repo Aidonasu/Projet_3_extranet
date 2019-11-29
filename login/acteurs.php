@@ -41,14 +41,24 @@
          <p class="mobile_description"><?=$results['description'];?></p>
 
 				 <fieldset>
+					 <?php
+					 require('../modele/pdoConnect.php');
+					 $query = $pdo->prepare('SELECT vote FROM vote where id_acteur = ?');
+					 $query->execute([$id]);
+					 $results = $query->fetch(PDO::FETCH_ASSOC);
+					 ?>
+					 <form class="" action="valid_vote.php" method="post">
+						 <input type="submit" name="" value="">
+					 </form>
 				 	<legend>Commentaires</legend>
 					<div class="comments">
 						<a href="new_comment_acteurs.php?acteurs=<?=$id;?>">Nouveau commentaire</a>
 						<input type="hidden" name="acteurs" value="<?=$id;?>">
-						<ul class="hand">
-							<li><i class="fas fa-thumbs-up"></i></li>
-							<li><i class="fas fa-thumbs-down"></i></li>
+						<ul class="like_dislike">
+							<li><?=$results['vote'];?></li>
+							<li><a class="hand"><i class="fas fa-thumbs-up"></i><i class="fas fa-thumbs-down"></i></a></li>
 						</ul>
+
 					</div>
 
 						<?php
