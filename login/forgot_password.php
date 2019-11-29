@@ -11,7 +11,7 @@
   </head>
   <body>
     <header>
-      <img src="../logo/GBAF.png" alt="logo1">
+      <a href="../index.php"><img src="../logo/GBAF.png" alt="logo1"></a>
     </header>
     <main>
       <form class="" action="valid_forgot_password.php" method="post">
@@ -41,10 +41,12 @@
              <label for="reponse">Réponse</label>
              <input class="form-input" type="text" name="reponse" required>
            </p>
-         <div class="center">
-           <input type="submit" name="recherche" value="Rechercher">
-         </div>
+           <ul class="account">
+             <li><input type="submit" name="recherche" value="Rechercher"></li>
+             <li><a href="../index.php" class="button button-cancel">Annuler</a></li>
+           </ul>
       </fieldset>
+
    </form>
     </main>
     <footer>
