@@ -19,7 +19,7 @@
   </head>
   <body>
     <header>
-      <img src="../logo/GBAF.png" alt="logo1">
+      <a href="index.php"><img src="../logo/GBAF.png" alt="logo1"></a>
 			<p>
 				<i class="fas fa-user"></i> <?=$_SESSION['nom']?> <?=$_SESSION['prenom'];?>
 				<br><br>
