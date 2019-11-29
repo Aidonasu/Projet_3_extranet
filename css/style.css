@@ -85,6 +85,10 @@ div img{
   width: 7em;
 }
 
+.account a{
+  border: none
+}
+
 .hand{
   margin:0;
 }
