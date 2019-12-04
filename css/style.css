@@ -1,185 +1,152 @@
 /***********MOBILE************/
-
-header,h1,h2,.center{
-  text-align: center;
+ header,h1,h2,.center{
+     text-align: center;
 }
-
-header p{
-  text-align: center;
-  margin:0;
+ header p{
+     text-align: center;
+     margin:0;
 }
-
 /*************FIELDSIET + FORMULAIRE*************/
-fieldset{
-  border-color:red;
+ fieldset{
+     border-color:red;
 }
-
-.form-input{
-  display: block;
-  width:20em;
+ .form-input{
+     display: block;
+     width:100%;
 }
-
-.forgot p{
-  text-align: left;
+ .form-select{
+     width: 100%;
 }
-
-.form-select{
-  width: 20.35em;
+ p{
+     text-align: justify;
 }
-
-p{
-  text-align: justify;
+ .mobile_description{
+     text-align: left;
+     padding: 0.5em;
 }
-
-.mobile_description{
-  text-align: left;
-  padding: 0.5em;
+ a{
+     text-decoration: none;
+     color:black;
 }
-
-a{
-  text-decoration: none;
-  color:black;
+ .link{
+     text-align: end;
 }
-
-.link{
-  text-align: end;
+ .link a, fieldset a, .like_dislike{
+     border: 2px solid red;
+     border-radius: 12px;
+     padding: 5px;
 }
-
-.link a, fieldset a, .like_dislike{
-  border: 2px solid red;
-  border-radius: 12px;
-  padding: 5px;
+ div img{
+     width: 320px;
+     height: 240px;
 }
-
-.center > input {
-  margin-bottom: 2em;
+ .mobile_text{
+     padding:9px;
 }
-
-div img{
-  width: 320px;
-  height: 240px;
+ .container{
+     padding: 0;
+     max-width: 100%;
+     padding-bottom: 15px;
 }
-
-.mobile_text{
-  padding:9px;
+ .acteurs{
+     padding: 8px 7px 15px 7px;
+     margin-top: 10px;
 }
-
-.container{
-  padding: 0;
-  max-width: 100%;
-  padding-bottom: 15px;
+ .account{
+     margin:0;
+     padding:0;
+     text-align: center;
 }
-
-.acteurs{
-  padding: 8px 7px 15px 7px;
-  margin-top: 10px;
+ .account li{
+     display:inline-block;
+    /*width: 8em;
+     */
 }
-
-.account{
-  padding:0;
-  text-align: center;
+ .account a{
+     border: none
 }
-
-.account li{
-  display:inline-block;
-  width: 7em;
-}
-
-.account a{
-  border: none
-}
-
 /************COMMENTAIRES**********/
-
-i.fa-thumbs-up{
-  margin-right:9px;
+ .like_dislike p{
+     margin:0;
 }
-
-.like_dislike li{
-  display: inline-block;
+ .hand{
+     display: inline-flex;
 }
-
-.like_dislike a{
-  border:none;
+ .fa-thumbs-up{
+     margin-right:9px;
 }
-
-.hand{
-  font-size: 1.5em;
+ button{
+     cursor: pointer;
+     border: none;
+     background-color: white;
 }
-
-.comments{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+ .like:hover{
+     color:green;
 }
-
-.comments a:nth-child(1){
-  padding:9px;
+ .dislike:hover{
+     color:red;
 }
-
+ .comments{
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+}
+ .comments a:nth-child(1){
+     padding:9px;
+}
 /*************FOOTER****************/
-
-footer ul{
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
+ footer ul{
+     list-style: none;
+     padding: 0;
+     display: flex;
+     justify-content: center;
 }
-
-footer ul li:first-child{
-  border-left: 2px solid red;
-  border-right: 2px solid red;
-  padding:0 5px;
-  margin-right: 5px;
+ footer ul li:first-child{
+     border-left: 2px solid red;
+     border-right: 2px solid red;
+     padding:0 5px;
+     margin-right: 5px;
 }
-
-footer ul li:last-child{
-  border-right: 2px solid red;
-  padding-right:5px;
+ footer ul li:last-child{
+     border-right: 2px solid red;
+     padding-right:5px;
 }
-
-@media all and (min-width: 768px) {
-
-  header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  header p{
-    margin-bottom: 5em;
-    margin-right: 3em;
-  }
-
-  .login div{
-    display:flex;
-    justify-content:space-around;
-  }
-
-  .login-connexion input{
-    width: 19em;
-  }
-
-  .center input{
-    width:10em;
-  }
-
-  div img{
-    height: 174px;
-    margin-top: 2rem;
-    margin-right: 1rem;
-  }
-
-  .tablet-acteurs{
-    display: flex;
-    align-items: center;
-    height: 10rem;
-  }
+ @media all and (min-width: 768px) {
+     header{
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+    }
+     header p{
+         margin-bottom: 5em;
+         margin-right: 3em;
+    }
+    /*.login div{
+         display:flex;
+         justify-content:space-around;
+    }
+     */
+     .login-connexion input{
+         width: 19em;
+    }
+     .center input{
+         width:10em;
+    }
+     div img{
+         height: 174px;
+         margin-top: 2rem;
+         margin-right: 1rem;
+    }
+     .tablet-acteurs{
+         display: flex;
+         align-items: center;
+         height: 10rem;
+    }
 }
-
-@media all and (min-width: 1024px){
-  body{
-    margin: 0 auto;
-    max-width: 60%;
-  }
+ @media all and (min-width: 1024px){
+     body{
+         margin: 0 auto;
+         max-width: 47rem;
+    }
 }
+ 
