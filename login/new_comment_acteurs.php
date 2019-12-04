@@ -41,7 +41,7 @@
            <fieldset>
             <legend>Nouveau commentaire</legend>
              <label for="new_comment"></label>
-             <textarea class="form-input" name="new_comment" rows="8" cols="80"></textarea>
+             <textarea class="form-input" name="new_comment" rows="8" cols="80" required></textarea>
              <input type="hidden" name="acteurs" value="<?=$id;?>">
              <ul class="account">
                <li><input type="submit" name="publier" value="Publier"></li>
