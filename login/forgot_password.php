@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Projet3</title>
     <link rel="stylesheet" href="../fontawesome5/web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
   </head>
@@ -18,19 +19,20 @@
         <?php if (isset($_GET['error'])): ?>
         <p>Mauvais UserName !</p>
         <?php endif; ?>
-      <fieldset class="forgot">
-         <legend>Récupération par nom d'utilisateur</legend>
-           <p>
+        <div class="card border-primary mb-3">
+          <div class="card-header">Récupération par nom d'utilisateur</div>
+          <div class="card-body">
+            <p class="card-text">
               <label for="user">UserName</label>
-              <input class="form-input" type="text" name="user" required>
-           </p>
-           <ul class="account">
-             <li><input type="submit" name="recherche" value="Rechercher"></li>
-             <li><a href="../index.php" class="button button-cancel">Annuler</a></li>
-           </ul>
-      </fieldset>
-
-   </form>
+              <input class="form-input form-control" type="text" name="user" required>
+            </p>
+            <ul class="account center">
+              <li><input type="submit" class="btn btn-primary" name="recherche" value="Rechercher"></li>
+              <li><a href="../index.php" class="btn btn-link">Annuler</a></li>
+            </ul>
+          </div>
+        </div>
+      </form>
     </main>
     <footer>
       <ul>
