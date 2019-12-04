@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Projet3</title>
     <link rel="stylesheet" href="../fontawesome5/web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
     <script
-			  src="https://code.jquery.com/jquery-3.4.1.min.js"
-			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-			  crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
@@ -22,28 +23,26 @@
         <?php if (isset($_GET['error'])): ?>
         <p>Mauvais UserName !</p>
         <?php endif; ?>
-      <fieldset class="forgot">
-         <legend>Changement du mot de passe</legend>
-         <?php
-          $id = $_GET['id_user'];
-         ?>
-           <p>
+        <div class="card border-primary mb-3">
+          <div class="card-header">Changement du mot de passe</div>
+          <?php
+            $id = $_GET['id_user'];
+            ?>
+          <div class="card-body">
+            <p class="card-text">
               <label for="user">Nouveau Password</label>
-              <input class="form-input" type="password" name="password" id="password" required>
+              <input class="form-input form-control" type="password" name="password" id="password" required>
               <label for="checkbox">
-                  <input type="checkbox" id="checkbox">
-                  Afficher le mot de passe
+              <input type="checkbox" id="checkbox">
+              Afficher le mot de passe
               </label>
-           </p>
-           <p>
-             <input type="hidden" name="id-user" value="<?=$id;?>">
-           </p>
-
-         <div class="center">
-           <input type="submit" name="modifier" value="Modifier">
-         </div>
-      </fieldset>
-   </form>
+            </p>
+            <div class="center">
+              <input class="btn btn-primary" type="submit" name="modifier" value="Modifier">
+            </div>
+          </div>
+        </div>
+      </form>
     </main>
     <footer>
       <ul>
