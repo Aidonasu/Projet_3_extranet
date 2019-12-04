@@ -14,7 +14,8 @@ $question = htmlspecialchars($_POST['question']);
 $reponse = htmlspecialchars($_POST['reponse']);
 $id = $_POST['account'];
 
-require('../modele/pdoConnect.php');
+require_once '../config-pdo.php';
+require '../modele/pdoConnect.php';
 $query = $pdo->prepare('UPDATE account set nom = ?, prenom = ?, username = ?, password = ?, question = ?, reponse = ? WHERE id_user=?');
 $query->execute([$nom,$prenom,$username,$password,$question,$reponse,$id]);
 

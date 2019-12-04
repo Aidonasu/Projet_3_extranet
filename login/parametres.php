@@ -29,7 +29,8 @@
 				<br><br>
 				<?php
         $id = $_GET['account'];
-        require('../modele/pdoConnect.php');
+				require_once '../config-pdo.php';
+				require '../modele/pdoConnect.php';
 				$query = $pdo->prepare('SELECT id_user,nom,prenom,username,password,question,reponse FROM account WHERE id_user=?');
 				$query->execute([$id]);
 				$results = $query->fetch(PDO::FETCH_ASSOC); ?>

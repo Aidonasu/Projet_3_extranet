@@ -6,7 +6,8 @@ $acteurs = htmlspecialchars($_POST['acteurs']);
 $user = $_SESSION['id_user'];
 $vote = 0;
 
-$pdo = new PDO('mysql:host=localhost;dbname=extranet-gbaf', 'root', 'f9m2zlri');  /* connection à la base de données */
+require_once '../config-pdo.php';
+require '../modele/pdoConnect.php';  /* connection à la base de données */
 $pdo->exec('SET NAMES UTF8');
 
 if ($vote == 0) {

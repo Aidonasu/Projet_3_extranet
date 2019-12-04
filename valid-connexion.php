@@ -1,11 +1,14 @@
 <?php
+
    session_start();
 
    $login = htmlspecialchars($_POST['login']);
    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
    /* connection à la base de données */
-   $pdo = new PDO('mysql:host=localhost;dbname=extranet-gbaf', 'root', 'f9m2zlri');
+
+   require_once 'config-pdo.php';
+   require 'modele/pdoConnect.php';
    $pdo->exec('SET NAMES UTF8');
    $query = $pdo->prepare("SELECT * FROM account where username=?");
    $query->execute([$login]);

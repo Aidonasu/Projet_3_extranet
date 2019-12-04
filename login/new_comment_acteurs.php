@@ -29,7 +29,8 @@
     <main>
       <?php
         $id = $_GET['acteurs'];
-          require('../modele/pdoConnect.php');
+				require_once '../config-pdo.php';
+				require '../modele/pdoConnect.php';
           $query = $pdo->prepare('SELECT acteur,description,logo FROM acteur where id_acteur = ?');
           $query->execute([$id]);
           $results = $query->fetch(PDO::FETCH_ASSOC);

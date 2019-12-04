@@ -5,7 +5,8 @@
    $question = htmlspecialchars($_POST['question']);
 
    /* connection à la base de données */
-   $pdo = new PDO('mysql:host=localhost;dbname=extranet-gbaf', 'root', 'f9m2zlri');
+   require_once '../config-pdo.php';
+   require '../modele/pdoConnect.php';
    $pdo->exec('SET NAMES UTF8');
    $query = $pdo->prepare("SELECT id_user,username,question,reponse FROM account where username=? and question=? and reponse=?");
    $query->execute([$user,$question,$reponse]);
