@@ -14,7 +14,7 @@
          integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
          crossorigin="anonymous"></script>
    </head>
-   <body>
+   <body class="accueil">
       <header>
          <a href="index.php"><img src="logo/GBAF.png" alt="logo1"></a>
       </header>
