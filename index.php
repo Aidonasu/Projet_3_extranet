@@ -72,6 +72,7 @@
               <a class="btn btn-primary" href="crea_compte.php">Créer un compte</a>
             </div>
          </div>
+         <div class="push"></div>
       </main>
       <footer>
          <ul class="bg-dark text-white">
