@@ -62,11 +62,13 @@
             <div class="card-body">
                <p class="card-title">Pour un accès complet à ce site, veuillez créer un compte utilisateur.</p>
             </div>
-            <a class="btn btn-link button" href="crea_compte.php">Créer un compte</a>
+            <div class="center">
+              <a class="btn btn-primary" href="crea_compte.php">Créer un compte</a>
+            </div>
          </div>
       </main>
       <footer>
-         <ul>
+         <ul class="bg-dark text-white">
             <li>Mentions légales</li>
             <li>Contact</li>
          </ul>
