@@ -23,7 +23,7 @@
       <a href="index.php"><img src="../logo/GBAF.png" alt="logo1"></a>
       <ul class="head_ul alert bg-dark">
         <li class="text-white"><i class="fas fa-user"></i> <?=$_SESSION['nom']?> <?=$_SESSION['prenom'];?></li>
-        <li><a href="parametres.php?account=<?=$_SESSION['id_user'];?>" class="text-white"><i class="fas fa-cog"></i>Paramètres du comtpe</a></li>
+        <li><a href="parametres.php?account=<?=$_SESSION['id_user'];?>" class="text-white"><i class="fas fa-cog"></i>Paramètres du compte</a></li>
         <li class="text-white"><a href="deconnexion.php" class="text-white"><i class="fas fa-university"></i>Deconnexion</a></li>
       </ul>
     </header>
@@ -66,6 +66,7 @@
           </div>
         </div>
         <?php } ?>
+				<div class="push"></div>
       </section>
     </main>
     <footer>
