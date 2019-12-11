@@ -27,11 +27,12 @@
        header('Location:login/index.php');
        exit();
      }
+     /*sinon renvoi a la page de connexion avec un message erreur*/
+       else{
+       header('Location:index.php?error');
+       exit();
+       }
    }
-   /*sinon renvoi a la page de connexion avec un message erreur*/
-     else{
-     header('Location:index.php?error');
-     exit();
-     }
+
 
    ?>
