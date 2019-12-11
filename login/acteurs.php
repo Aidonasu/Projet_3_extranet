@@ -83,16 +83,25 @@
                 $results = $query->fetch(PDO::FETCH_ASSOC);
                 ?>
               <div class="hand">
+                <?php
+                  $like = 'black';
+                  $dislike = 'black';
+                if ($results['votelike']) {
+                  $like = 'green';
+                 }
+                 elseif ($results['votedislike']) {
+                   $dislike = 'red';
+                 }?>
                 <p><?=$results['votelike'];?></p>
                 <form class="" action="valid_vote_like.php" method="post">
-                  <button class="like" type="submit" name="like"><i class="fas fa-thumbs-up"></i></button>
+                  <button class="like" type="submit" name="like"><i class="fas fa-thumbs-up" style="color:<?=$like;?>"></i></button>
                   <input type="hidden" name="acteurs" value="<?=$id;?>">
                 </form>
               </div>
               <div class="hand">
                 <p><?=$results['votedislike'];?></p>
                 <form class="" action="valid_vote_dislike.php" method="post">
-                  <button class="dislike" type="submit" name="dislike"><i class="fas fa-thumbs-down"></i></button>
+                  <button class="dislike" type="submit" name="dislike"><i class="fas fa-thumbs-down" style="color:<?=$dislike;?>"></i></button>
                   <input type="hidden" name="acteurs" value="<?=$id;?>">
                 </form>
               </div>
@@ -113,7 +122,7 @@
             <?=$value['prenom'];?> le
             <?="$datefr[2]-$datefr[1]-$datefr[0]"?>
           </p>
-          <div class="alert alert-dismissible alert-secondary bg-grey">
+          <div class="alert alert-dismissible alert-secondary">
             <p><?=$value['post'];?></p>
           </div>
         </div>
