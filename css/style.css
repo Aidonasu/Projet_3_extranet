@@ -147,6 +147,10 @@ div > a{
   margin: 0;
 }
 
+.new_comment > div{
+  padding-right:1.5em;
+}
+
  .like_dislike p{
      margin:0;
 }
