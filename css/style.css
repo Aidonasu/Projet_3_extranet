@@ -134,9 +134,14 @@ div > a{
 
  @media all and (min-width: 768px) {
 
-   body{
+   .connecter{
        margin: 0 auto;
-       max-width: 50em;
+       max-width: 60em;
+  }
+
+  .accueil{
+    margin: 0 auto;
+    max-width: 47em;
   }
 
      header{
@@ -171,8 +176,8 @@ div > a{
     }
 }
  @media all and (min-width: 1024px){
-     body{
+     .connecter{
          margin: 0 auto;
-         max-width: 50em;
+         max-width: 60em;
     }
 }
