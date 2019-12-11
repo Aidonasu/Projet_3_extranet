@@ -1,5 +1,22 @@
 /***********MOBILE************/
 
+/****FOOTER TOUJOURS EN BAS DE PAGE****/
+
+html{
+  height: 100%;
+}
+
+body{
+   min-height: 100%;
+   position: relative;
+}
+
+footer{
+  position:absolute;
+  width:100%;
+  bottom: 0px;
+}
+
 /****HEADER****/
 
  header,h1,h2,.center{
@@ -15,6 +32,21 @@ header img{
   height: auto;
 }
 
+.head_ul{
+  padding: 0;
+  list-style: none;
+}
+
+.head_ul li:nth-child(2){
+  margin-top:1em;
+  margin-bottom: 1em;
+}
+
+.head_ul li i{
+  color:red;
+  margin-right:0.5em;
+}
+
 /****ICONE***/
 
 .fa-university{
@@ -27,10 +59,31 @@ header img{
   margin:0;
 }
 
-/*************FIELDSIET + FORMULAIRE*************/
- fieldset{
-     border-color:red;
+/****FICHE ACTEURS INDEX****/
+
+.mobile_text{
+    padding:9px;
 }
+
+.link{
+    text-align: end;
+}
+
+.flex_acteurs, .flex_principal_acteur{
+  display: flex;
+  flex-direction: column;
+}
+
+.flex_acteurs > div, .flex_principal_acteur > div{
+  margin-top: 1em;
+}
+
+.card-body-text{
+  padding:1em;
+}
+
+/*************FORMULAIRE*************/
+
  .form-input{
      display: block;
      width:100%;
@@ -54,10 +107,8 @@ div > a{
      text-decoration: none;
      color:black;
 }
- .link{
-     text-align: end;
-}
- .link a, fieldset a, .like_dislike{
+
+ .like_dislike{
      border: 2px solid red;
      border-radius: 12px;
      padding: 5px;
@@ -66,9 +117,7 @@ div > a{
      width: 320px;
      height: 240px;
 }
- .mobile_text{
-     padding:9px;
-}
+
  .container{
      padding: 0;
      max-width: 100%;
@@ -91,7 +140,13 @@ div > a{
  .account a{
      border: none
 }
-/************COMMENTAIRES**********/
+/****COMMENTAIRES****/
+
+.new_comment > p:nth-child(1) {
+  padding: 0 1em 0 1em;
+  margin: 0;
+}
+
  .like_dislike p{
      margin:0;
 }
@@ -114,13 +169,35 @@ div > a{
 }
  .comments{
      display: flex;
-     align-items: center;
+     align-items: flex-start;
      justify-content: space-around;
 }
  .comments a:nth-child(1){
      padding:9px;
 }
+
+div.card:nth-child(2) > p:nth-child(2) {
+  padding: 1em;
+}
+
+#exampleTextarea{
+  height: 10em;
+}
+
+.text_area{
+  padding: 1em;
+  padding-top: 0;
+}
+
+.area{
+  margin-bottom: 1em;
+}
 /*************FOOTER****************/
+
+.push{
+  height: 8em;
+}
+
  footer ul{
      list-style: none;
      display: flex;
@@ -153,6 +230,27 @@ div > a{
          margin-bottom: 5em;
          margin-right: 3em;
     }
+
+    .head_ul{
+      padding: 0.5em;
+      width: 14em;
+    }
+
+    .flex_acteurs{
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+    }
+
+    .flex_acteurs > div{
+      margin-left: 1em;
+      margin-top: 0;
+    }
+
+    .flex_principal_acteur > div{
+      margin-top: 0;
+    }
+
     /*.login div{
          display:flex;
          justify-content:space-around;
