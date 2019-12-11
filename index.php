@@ -21,17 +21,23 @@
       <main>
          <p name="sucess"><?php
             if (isset($_GET['sucess'])) {
-              if ($_GET['sucess']==1) {
-                echo 'Votre compte a bien été créer ! Félicitation !';
-                sleep(1);
+              if ($_GET['sucess']==1) {?>
+                <div class="alert alert-dark">
+                  <p>Votre compte a bien été créer !</p>
+                </div>
+                <?php sleep(1);
               }
-              elseif ($_GET['sucess']==2) {
-                echo 'Vote mot de passe a été modifié !';
-                sleep(1);
+              elseif ($_GET['sucess']==2) {?>
+                <div class="alert alert-dark">
+                  <p>Vote mot de passe a été modifié !</p>
+                </div>
+                <?php sleep(1);
               }
             }?></p>
          <?php if (isset($_GET['error'])): ?>
-         <p>Mauvais identifiants !</p>
+           <div class="alert alert-dark">
+             <p>Mauvais identifiants !</p>
+           </div>
          <?php endif; ?>
          <form class="" action="valid-connexion.php" method="post">
             <div class="card border-primary mb-3">
