@@ -15,6 +15,11 @@
       <a href="../index.php"><img src="../logo/GBAF.png" alt="logo1"></a>
     </header>
     <main>
+      <?php if (isset($_GET['error'])): ?>
+        <div class="alert alert-dark">
+          <p>La question et/ou la réponse n'est pas correct !</p>
+        </div>
+      <?php endif; ?>
       <form class="" action="valid_secret_question.php" method="post">
         <div class="card border-primary mb-3">
           <div class="card-header">Question secrète</div>
@@ -36,6 +41,10 @@
               <label for="reponse">Réponse</label>
               <input class="form-input form-control" type="text" name="reponse" required>
             </p>
+            <?php
+              $id = $_GET['id_user'];
+             ?>
+            <input type="hidden" name="iduser" value="<?=$id;?>">
             <ul class="account center">
               <li><input type="submit" class="btn btn-primary" value="Rechercher"></li>
               <li><a href="../index.php" class="btn btn-link">Annuler</a></li>
