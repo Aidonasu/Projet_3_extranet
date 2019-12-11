@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
   </head>
-  <body>
+  <body class="accueil">
     <header>
       <a href="../index.php"><img src="../logo/GBAF.png" alt="logo1"></a>
     </header>
@@ -46,9 +46,9 @@
       </form>
     </main>
     <footer>
-      <ul>
-        <li>Mentions légales</li>
-        <li>Contact</li>
+      <ul class="bg-dark text-white">
+        <li><a href="mentions_legales.php" class="text-white btn btn-outline-primary">Mentions légales</a></li>
+        <li><a href="#" class="text-white btn btn-outline-primary">Contact</a></li>
       </ul>
     </footer>
   </body>
