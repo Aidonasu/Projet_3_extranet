@@ -20,6 +20,13 @@ header img{
 .fa-university{
   color:red;
 }
+
+/****SUCESS ET ERROR****/
+
+.alert p{
+  margin:0;
+}
+
 /*************FIELDSIET + FORMULAIRE*************/
  fieldset{
      border-color:red;
