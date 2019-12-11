@@ -14,10 +14,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Projet3</title>
     <link rel="stylesheet" href="../fontawesome5/web-fonts-with-css/css/fontawesome-all.min.css">
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
   </head>
-  <body>
+  <body class="connecter">
     <header>
       <a href="index.php"><img src="../logo/GBAF.png" alt="logo1"></a>
 			<p>
@@ -73,12 +74,12 @@
       </section>
 
     </main>
-    <footer>
-      <ul>
-        <li>Mentions légales</li>
-        <li>Contact</li>
-      </ul>
-    </footer>
+		<footer>
+			 <ul class="bg-dark text-white">
+					<li><a href="mentions_legales.php" class="text-white btn btn-outline-primary">Mentions légales</a></li>
+					<li><a href="#" class="text-white btn btn-outline-primary">Contact</a></li>
+			 </ul>
+		</footer>
   </body>
 </html>
 <?php }
