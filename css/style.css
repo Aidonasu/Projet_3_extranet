@@ -1,10 +1,24 @@
 /***********MOBILE************/
+
+/****HEADER****/
+
  header,h1,h2,.center{
      text-align: center;
 }
  header p{
      text-align: center;
      margin:0;
+}
+
+header img{
+  width: 110px;
+  height: auto;
+}
+
+/****ICONE***/
+
+.fa-university{
+  color:red;
 }
 /*************FIELDSIET + FORMULAIRE*************/
  fieldset{
@@ -17,6 +31,11 @@
  .form-select{
      width: 100%;
 }
+
+div > a{
+  margin-bottom : 1em;
+}
+
  p{
      text-align: justify;
 }
@@ -97,21 +116,22 @@
 /*************FOOTER****************/
  footer ul{
      list-style: none;
-     padding: 0;
      display: flex;
      justify-content: center;
+     padding: 2em;
+     margin:0;
 }
  footer ul li:first-child{
-     border-left: 2px solid red;
-     border-right: 2px solid red;
-     padding:0 5px;
-     margin-right: 5px;
+     margin-right: 1em;
 }
- footer ul li:last-child{
-     border-right: 2px solid red;
-     padding-right:5px;
-}
+
  @media all and (min-width: 768px) {
+
+   body{
+       margin: 0 auto;
+       max-width: 50em;
+  }
+
      header{
          display: flex;
          align-items: center;
@@ -146,7 +166,6 @@
  @media all and (min-width: 1024px){
      body{
          margin: 0 auto;
-         max-width: 47rem;
+         max-width: 50em;
     }
 }
- 
