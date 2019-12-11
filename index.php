@@ -23,7 +23,7 @@
             if (isset($_GET['sucess'])) {
               if ($_GET['sucess']==1) {?>
                 <div class="alert alert-dark">
-                  <p>Votre compte a bien été créer !</p>
+                  <p>Votre compte a bien été créer ! Vous pouvez vous connecter !</p>
                 </div>
                 <?php sleep(1);
               }
