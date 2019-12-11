@@ -1,11 +1,11 @@
 <?php
-	session_start();
+  session_start();
 
-	if (!isset($_SESSION['id_user']) || empty($_SESSION['id_user'])){
-	header('Location:index.php');
-	exit();
-	}
-	else { ?>
+  if (!isset($_SESSION['id_user']) || empty($_SESSION['id_user'])){
+  header('Location:index.php');
+  exit();
+  }
+  else { ?>
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -14,23 +14,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Projet3</title>
     <link rel="stylesheet" href="../fontawesome5/web-fonts-with-css/css/fontawesome-all.min.css">
-		<link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body class="connecter">
     <header>
       <a href="index.php"><img src="../logo/GBAF.png" alt="logo1"></a>
-			<p>
-				<i class="fas fa-user"></i> <?=$_SESSION['nom']?> <?=$_SESSION['prenom'];?>
-				<br><br>
-				<a href="parametres.php?account=<?=$_SESSION['id_user'];?>"><i class="fas fa-cog"></i>Paramètres du comtpe</a>
-				<br>
-        <a href="deconnexion.php"><i class="fas fa-university"></i>Deconnexion</a>
-      </p>
+      <ul class="head_ul alert bg-dark">
+        <li class="text-white"><i class="fas fa-user"></i> <?=$_SESSION['nom']?> <?=$_SESSION['prenom'];?></li>
+        <li><a href="parametres.php?account=<?=$_SESSION['id_user'];?>" class="text-white"><i class="fas fa-cog"></i>Paramètres du comtpe</a></li>
+        <li class="text-white"><a href="deconnexion.php" class="text-white"><i class="fas fa-university"></i>Deconnexion</a></li>
+      </ul>
     </header>
     <main>
-      <section class="mobile_text">
+      <section class="mobile_text jumbotron">
         <h1>Présentation de la GBAF</h1>
         <p>Le Groupement Banque Assurance Français (GBAF) est une fédération représentant les 6 grands groupes français :</p>
         <ul>
@@ -45,42 +43,38 @@
       </section>
       <section>
         <h2>Textes acteurs et partenaires</h2>
-        <fieldset class="container">
         <?php
-
-					require_once '../config-pdo.php';
-          require '../modele/pdoConnect.php';
-          $query = $pdo->prepare('SELECT id_acteur,logo,acteur,description FROM acteur');
-          $query->execute();
-          $results = $query->fetchall(PDO::FETCH_ASSOC);
-          foreach ($results as $value) {
-          ?>
-          <fieldset class="acteurs">
-            <section class="tablet-acteurs">
-              <div class="center">
-                <img src="../logo/<?=$value['logo'];?>">
-              </div>
-              <div class="">
-                <h3><?=$value['acteur'];?></h3>
-                <p><?=SUBSTR($value['description'],0,53);?>...</p>
-              </div>
-            </section>
-            <div class="link">
-              <a href="acteurs.php?acteurs=<?=$value['id_acteur'];?>" class="test">lire la suite</a>
+          require_once '../config-pdo.php';
+               require '../modele/pdoConnect.php';
+               $query = $pdo->prepare('SELECT id_acteur,logo,acteur,description FROM acteur');
+               $query->execute();
+               $results = $query->fetchall(PDO::FETCH_ASSOC);
+               foreach ($results as $value) {
+               ?>
+        <div class="card mb-3 border-primary">
+          <div class="flex_acteurs">
+            <div class="center">
+              <a href="acteurs.php?acteurs=<?=$value['id_acteur'];?>"><img src="../logo/<?=$value['logo'];?>"></a>
             </div>
-          </fieldset>
+            <div class="card-body-text">
+              <h3 class="card-title"><?=$value['acteur'];?></h3>
+              <p class="card-text"><?=SUBSTR($value['description'],0,53);?>...</p>
+            </div>
+          </div>
+          <div class="link">
+            <a href="acteurs.php?acteurs=<?=$value['id_acteur'];?>" class="btn btn-link">lire la suite</a>
+          </div>
+        </div>
         <?php } ?>
-        </fieldset>
       </section>
-
     </main>
-		<footer>
-			 <ul class="bg-dark text-white">
-					<li><a href="mentions_legales.php" class="text-white btn btn-outline-primary">Mentions légales</a></li>
-					<li><a href="#" class="text-white btn btn-outline-primary">Contact</a></li>
-			 </ul>
-		</footer>
+    <footer>
+      <ul class="bg-dark text-white">
+        <li><a href="mentions_legales.php" class="text-white btn btn-outline-primary">Mentions légales</a></li>
+        <li><a href="#" class="text-white btn btn-outline-primary">Contact</a></li>
+      </ul>
+    </footer>
   </body>
 </html>
 <?php }
-	?>
+  ?>
