@@ -73,6 +73,7 @@
           </div>
         </div>
       </form>
+      <div class="push"></div>
     </main>
     <footer>
        <ul class="bg-dark text-white">
