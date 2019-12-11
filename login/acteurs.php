@@ -14,20 +14,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Projet3</title>
     <link rel="stylesheet" href="../fontawesome5/web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
   </head>
-  <body>
+  <body class="connecter">
     <header>
       <a href="index.php"><img src="../logo/GBAF.png" alt="logo1"></a>
-      <p>
-        <i class="fas fa-user"></i>
-        <?=$_SESSION['nom']?>
-        <?=$_SESSION['prenom'];?>
-        <br>
-        <br>
-        <a href="deconnexion.php"><i class="fas fa-university"></i>Deconnexion</a>
-      </p>
+      <ul class="head_ul alert bg-dark">
+        <li class="text-white"><i class="fas fa-user"></i> <?=$_SESSION['nom']?> <?=$_SESSION['prenom'];?></li>
+        <li><a href="parametres.php?account=<?=$_SESSION['id_user'];?>" class="text-white"><i class="fas fa-cog"></i>Paramètres du compte</a></li>
+        <li class="text-white"><a href="deconnexion.php" class="text-white"><i class="fas fa-university"></i>Deconnexion</a></li>
+      </ul>
     </header>
     <main>
       <?php
@@ -38,15 +36,19 @@
           $query->execute([$id]);
           $results = $query->fetch(PDO::FETCH_ASSOC);
          ?>
-      <div class="center">
-        <img src="../logo/<?=$results['logo'];?>" alt="">
+      <div class="card mb-3 border-primary">
+        <div class="flex_principal_acteur">
+          <div class="center">
+            <img src="../logo/<?=$results['logo'];?>">
+          </div>
+          <div class="card-body-text">
+            <h3 class="card-title center"><?=$results['acteur'];?></h3>
+            <p class="card-text"><?=$results['description'];?></p>
+          </div>
+        </div>
       </div>
-      <h2><?=$results['acteur'];?></h2>
-      <p class="mobile_description">
-        <?=$results['description'];?>
-      </p>
-      <fieldset>
-        <legend>Commentaires</legend>
+      <div class="card border-primary mb-3">
+        <div class="card-header">Commentaires</div>
         <?php
           $user = $_SESSION['id_user'];
           $comment = $pdo->prepare("SELECT id_user,id_acteur FROM post where id_user=? and id_acteur=?");
@@ -54,43 +56,48 @@
           $results_com = $comment->fetch(PDO::FETCH_ASSOC);
 
           if ($results_com['id_user']) {?>
-        <p>Vous avez écrit un commentaire ! (1 commenteur par acteur)</p>
+        <p>Vous avez écrit un commentaire ! (1 commentaire par acteur)</p>
         <?php }
           if (isset($_GET['error'])) {
-            if ($_GET['error']==1) {
-              echo 'Vous avez déjà écrit !';
-              sleep(1);
-            }
-            elseif ($_GET['error']==2) {
-              echo 'Vous avez déjà voté !';
-              sleep(1);
-            }
+            if ($_GET['error']==1) {?>
+        <div class="alert alert-dark">
+          <p>Vous avez déjà écrit un commentaire !</p>
+        </div>
+        <?php sleep(1);
+          }
+          elseif ($_GET['error']==2) {?>
+        <div class="alert alert-dark">
+          <p>Vous avez déjà voté</p>
+        </div>
+        <?php sleep(1);
+          }
           } ?>
-        <div class="comments">
-          <a href="new_comment_acteurs.php?acteurs=<?=$id;?>">Nouveau commentaire</a>
-          <input type="hidden" name="acteurs" value="<?=$id;?>">
-          <section class="like_dislike">
-            <?php
-              $query = $pdo->prepare('SELECT id_user,SUM(vote_like) AS votelike,SUM(vote_dislike) AS votedislike FROM vote where id_acteur = ?');
-              $query->execute([$id]);
-              $results = $query->fetch(PDO::FETCH_ASSOC);
-
-              ?>
-            <div class="hand">
-              <p><?=$results['votelike'];?></p>
-              <form class="" action="valid_vote_like.php" method="post">
-                <button class="like" type="submit" name="like"><i class="fas fa-thumbs-up"></i></button>
-                <input type="hidden" name="acteurs" value="<?=$id;?>">
-              </form>
-            </div>
-            <div class="hand">
-              <p><?=$results['votedislike'];?></p>
-              <form class="" action="valid_vote_dislike.php" method="post">
-                <button class="dislike" type="submit" name="dislike"><i class="fas fa-thumbs-down"></i></button>
-                <input type="hidden" name="acteurs" value="<?=$id;?>">
-              </form>
-            </div>
-          </section>
+        <div class="card-body">
+          <div class="comments">
+            <a href="new_comment_acteurs.php?acteurs=<?=$id;?>" class="btn btn-primary">Nouveau commentaire</a>
+            <input type="hidden" name="acteurs" value="<?=$id;?>">
+            <section class="like_dislike">
+              <?php
+                $query = $pdo->prepare('SELECT id_user,SUM(vote_like) AS votelike,SUM(vote_dislike) AS votedislike FROM vote where id_acteur = ?');
+                $query->execute([$id]);
+                $results = $query->fetch(PDO::FETCH_ASSOC);
+                ?>
+              <div class="hand">
+                <p><?=$results['votelike'];?></p>
+                <form class="" action="valid_vote_like.php" method="post">
+                  <button class="like" type="submit" name="like"><i class="fas fa-thumbs-up"></i></button>
+                  <input type="hidden" name="acteurs" value="<?=$id;?>">
+                </form>
+              </div>
+              <div class="hand">
+                <p><?=$results['votedislike'];?></p>
+                <form class="" action="valid_vote_dislike.php" method="post">
+                  <button class="dislike" type="submit" name="dislike"><i class="fas fa-thumbs-down"></i></button>
+                  <input type="hidden" name="acteurs" value="<?=$id;?>">
+                </form>
+              </div>
+            </section>
+          </div>
         </div>
         <?php
           require '../modele/pdoConnect.php';
@@ -98,7 +105,7 @@
                $query->execute([$id]);
                $results = $query->fetchall(PDO::FETCH_ASSOC);
           foreach ($results as $value) {
-          	$date = substr($value['date_add'],0,10);
+            $date = substr($value['date_add'],0,10);
                  $datefr = explode('-', $date);
              ?>
         <div class="new_comment">
@@ -106,18 +113,21 @@
             <?=$value['prenom'];?> le
             <?="$datefr[2]-$datefr[1]-$datefr[0]"?>
           </p>
-          <p>
-            <?=$value['post'];?>
-          </p>
+          <div class="alert alert-dismissible alert-secondary bg-grey">
+            <p><?=$value['post'];?></p>
+          </div>
         </div>
         <?php } ?>
-      </fieldset>
-      <a href="index.php">Retour</a>
+      </div>
+      <div class="center">
+        <a href="index.php" class="btn btn-link">Retour</a>
+      </div>
+      <div class="push"></div>
     </main>
     <footer>
-      <ul>
-        <li>Mentions légales</li>
-        <li>Contact</li>
+      <ul class="bg-dark text-white">
+        <li><a href="mentions_legales.php" class="text-white btn btn-outline-primary">Mentions légales</a></li>
+        <li><a href="#" class="text-white btn btn-outline-primary">Contact</a></li>
       </ul>
     </footer>
   </body>
