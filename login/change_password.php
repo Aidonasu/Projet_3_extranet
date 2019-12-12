@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Projet3</title>
+    <title>GBAF - Changement mot de passe</title>
     <link rel="stylesheet" href="../fontawesome5/web-fonts-with-css/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/normalize.css">
@@ -37,9 +37,10 @@
               Afficher le mot de passe
               </label>
             </p>
-            <div class="center">
-              <input class="btn btn-primary" type="submit" name="modifier" value="Modifier">
-            </div>
+            <ul class="account center">
+              <li><input type="submit" class="btn btn-primary" name="modifier" value="Modifier"></li>
+              <li><a href="../index.php" class="btn btn-link">Annuler</a></li>
+            </ul>
           </div>
         </div>
       </form>
