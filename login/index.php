@@ -66,7 +66,7 @@
           </div>
         </div>
         <?php } ?>
-				<div class="push"></div>
+        <div class="push"></div>
       </section>
     </main>
     <footer>

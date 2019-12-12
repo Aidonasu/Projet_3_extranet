@@ -16,9 +16,9 @@
     </header>
     <main>
       <?php if (isset($_GET['error'])): ?>
-        <div class="alert alert-dark">
-          <p>La question et/ou la réponse n'est pas correct !</p>
-        </div>
+      <div class="alert alert-dark">
+        <p>La question et/ou la réponse n'est pas correct !</p>
+      </div>
       <?php endif; ?>
       <form class="" action="valid_secret_question.php" method="post">
         <div class="card border-primary mb-3">
@@ -43,7 +43,7 @@
             </p>
             <?php
               $id = $_GET['id_user'];
-             ?>
+              ?>
             <input type="hidden" name="iduser" value="<?=$id;?>">
             <ul class="account center">
               <li><input type="submit" class="btn btn-primary" value="Rechercher"></li>

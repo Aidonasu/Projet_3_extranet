@@ -84,12 +84,12 @@
                 <?php
                   $like = 'black';
                   $dislike = 'black';
-                if ($results['votelike']) {
+                  if ($results['votelike']) {
                   $like = 'green';
-                 }
-                 elseif ($results['votedislike']) {
+                  }
+                  elseif ($results['votedislike']) {
                    $dislike = 'red';
-                 }?>
+                  }?>
                 <p><?=$results['votelike'];?></p>
                 <form class="" action="valid_vote_like.php" method="post">
                   <button class="like" type="submit" name="like"><i class="fas fa-thumbs-up" style="color:<?=$like;?>"></i></button>
