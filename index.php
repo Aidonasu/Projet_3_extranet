@@ -33,7 +33,7 @@
       </div>
       <?php sleep(1);
         }
-        }?></p>
+        }?>
       <?php if (isset($_GET['error'])): ?>
       <div class="alert alert-dark">
         <p>Mauvais identifiants !</p>
