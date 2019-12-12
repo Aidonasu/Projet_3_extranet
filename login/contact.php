@@ -1,3 +1,11 @@
+<?php
+  session_start();
+
+  if (!isset($_SESSION['id_user']) || empty($_SESSION['id_user'])){
+  header('Location:index.php');
+  exit();
+  }
+  else { ?>
 <!DOCTYPE html>
 <html lang="fr">
    <head>
@@ -57,3 +65,5 @@
       <script type="text/javascript" src="js/reveal_code.js"></script>
    </body>
 </html>
+<?php }
+  ?>
