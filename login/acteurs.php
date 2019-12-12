@@ -46,7 +46,7 @@
         </div>
       </div>
       <div class="card border-primary mb-3">
-        <div class="card-header">Commentaires</div>
+        <div class="card-header">Commentaires <small class="form-text text-muted">(1 commentaire et 1 vote par acteur).</small></div>
         <?php
           $user = $_SESSION['id_user'];
           $comment = $pdo->prepare("SELECT id_user,id_acteur FROM post where id_user=? and id_acteur=?");
