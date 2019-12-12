@@ -59,7 +59,7 @@
 		<footer>
 			<ul class="bg-dark text-white">
 				<li><a href="mentions_legales.php" class="text-white btn btn-outline-primary">Mentions légales</a></li>
-				<li><a href="#" class="text-white btn btn-outline-primary">Contact</a></li>
+				<li><a href="contact.php" class="text-white btn btn-outline-primary">Contact</a></li>
 			</ul>
 		</footer>
   </body>
