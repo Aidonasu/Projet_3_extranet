@@ -25,6 +25,11 @@
   <body class="accueil">
     <header>
       <a href="index.php"><img src="../logo/GBAF.png" alt="logo1"></a>
+      <ul class="head_ul alert bg-dark">
+        <li class="text-white"><i class="fas fa-user"></i> <?=$_SESSION['nom']?> <?=$_SESSION['prenom'];?></li>
+        <li><a href="parametres.php?account=<?=$_SESSION['id_user'];?>" class="text-white"><i class="fas fa-cog"></i>Paramètres du compte</a></li>
+        <li class="text-white"><a href="deconnexion.php" class="text-white"><i class="fas fa-university"></i>Deconnexion</a></li>
+      </ul>
     </header>
     <main>
       <form class="" action="valid_contact.php" method="post">
@@ -33,7 +38,7 @@
           <div class="card-body">
             <p class="card-text">
               <label for="nom">Votre nom (obligatoire)</label>
-              <input class="form-input form-control" type="text" name="nom" required>
+              <input class="form-input form-control" type="text" name="nom" value="<?=$_SESSION['nom']?> <?=$_SESSION['prenom'];?>"required>
             </p>
             <p class="card-text">
               <label for="mail">Votre mail (obligatoire)</label>
@@ -59,7 +64,7 @@
     <footer>
       <ul class="bg-dark text-white">
         <li><a href="mentions_legales.php" class="text-white btn btn-outline-primary">Mentions légales</a></li>
-        <li><a href="index.php" class="text-white btn btn-outline-primary">Contact</a></li>
+        <li><a href="contact.php" class="text-white btn btn-outline-primary">Contact</a></li>
       </ul>
     </footer>
     <script type="text/javascript" src="js/reveal_code.js"></script>
