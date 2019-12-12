@@ -40,6 +40,9 @@
       <form class="" action="valid_new_comment.php" method="post">
         <div class="card border-primary mb-3">
           <div class="card-header">Nouveau commentaire</div>
+          <div class="card-body">
+            <p>Merci de donner un avis​ professionnel et constructif.</p>
+          </div>
           <div class="form-group form-input text_area">
             <label for="exampleTextarea"></label>
             <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
