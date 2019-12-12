@@ -44,8 +44,8 @@
             <p>Merci de donner un avis​ professionnel et constructif.</p>
           </div>
           <div class="form-group form-input text_area">
-            <label for="exampleTextarea"></label>
-            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+            <label for="new_comment"></label>
+            <textarea class="form-control" id="exampleTextarea" rows="3" name="new_comment"></textarea>
             <input type="hidden" name="acteurs" value="<?=$id;?>">
           </div>
           <ul class="account center area">
