@@ -20,21 +20,21 @@
     </header>
     <main>
       <p name="sucess"><?php
-        if (isset($_GET['sucess'])) {
-          if ($_GET['sucess']==1) {?>
+        if (isset($_GET['success'])) {
+          if ($_GET['success']==1) {?>
       <div class="alert alert-dark">
         <p>Votre compte a bien été créer ! Vous pouvez vous connecter !</p>
       </div>
       <?php sleep(1);
         }
-        elseif ($_GET['sucess']==2) {?>
+        elseif ($_GET['success']==2) {?>
       <div class="alert alert-dark">
         <p>Vote mot de passe a été modifié !</p>
       </div>
       <?php sleep(1);
         }
-        }?>
-      <?php if (isset($_GET['error'])): ?>
+        }
+      if (isset($_GET['error'])): ?>
       <div class="alert alert-dark">
         <p>Mauvais identifiants !</p>
       </div>
