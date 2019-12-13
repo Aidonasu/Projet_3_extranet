@@ -26,6 +26,10 @@
       header('Location:login/index.php');
       exit();
     }
+    else{
+    header('Location:index.php?error');
+    exit();
+    }
   }
   /*sinon renvoi a la page de connexion avec un message erreur*/
     else{
