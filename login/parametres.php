@@ -39,7 +39,17 @@
           require '../modele/pdoConnect.php';
           $query = $pdo->prepare('SELECT id_user,nom,prenom,username,password,question,reponse FROM account WHERE id_user=?');
           $query->execute([$id]);
-          $results = $query->fetch(PDO::FETCH_ASSOC); ?>
+          $results = $query->fetch(PDO::FETCH_ASSOC);
+
+          if ($results['id_user'] != $_SESSION['id_user']) {
+            $true_user = $_SESSION['id_user'];
+            header("Location:parametres.php?account=$true_user&error");
+          }
+              if (isset($_GET['error'])){?>
+                <div class="alert alert-dark">
+                  <p>Vous n'êtes pas autorisé à effectuer cette action !</p>
+                </div>
+          <?php } ?>
         <div class="card border-primary mb-3">
           <div class="card-header">Paramètres du compte</div>
           <div class="card-body">
