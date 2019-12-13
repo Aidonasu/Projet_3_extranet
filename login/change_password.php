@@ -37,6 +37,7 @@
               Afficher le mot de passe
               </label>
             </p>
+            <input type="hidden" name="id-user" value="<?=$id;?>">
             <ul class="account center">
               <li><input type="submit" class="btn btn-primary" name="modifier" value="Modifier"></li>
               <li><a href="../index.php" class="btn btn-link">Annuler</a></li>
