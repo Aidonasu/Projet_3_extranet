@@ -9,9 +9,14 @@
     require_once '../config-pdo.php';
     require '../modele/pdoConnect.php';
       $id = $_GET['acteurs'];
-      $query = $pdo->prepare('SELECT acteur,description,logo FROM acteur where id_acteur = ?');
+      $query = $pdo->prepare('SELECT id_acteur,acteur,description,logo FROM acteur where id_acteur = ?');
       $query->execute([$id]);
-      $results = $query->fetch(PDO::FETCH_ASSOC);?>
+      $results = $query->fetch(PDO::FETCH_ASSOC);
+
+      if (!$results['id_acteur']) {
+        header("Location:index.php?error");
+     }
+     ?>
 <!DOCTYPE html>
 <html lang="fr">
   <head>
