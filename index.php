@@ -45,11 +45,11 @@
           <div class="card-body">
             <p class="card-title">Pour accéder aux information du site, renseignez votre UserName et votre Password</p>
             <p class="card-text">
-              <label for="">UserName</label>
+              <label for="login">UserName</label>
               <input class="form-input form-control" type="text" name="login" required>
             </p>
             <p class="card-text">
-              <label for="">Password</label>
+              <label for="password">Password</label>
               <input class="form-input form-control" type="password" name="password" id="password" required>
               <label for="checkbox">
               <input type="checkbox" id="checkbox">
