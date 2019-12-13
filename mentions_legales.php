@@ -9,10 +9,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"></script>
   </head>
   <body class="accueil">
     <header>
@@ -38,6 +34,5 @@
         <li><a href="contact.php" class="text-white btn btn-outline-primary">Contact</a></li>
       </ul>
     </footer>
-    <script type="text/javascript" src="js/reveal_code.js"></script>
   </body>
 </html>
