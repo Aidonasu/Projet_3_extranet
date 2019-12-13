@@ -16,6 +16,6 @@
   $query->execute(array($nom,$prenom,$login,$password,$question,$reponse));
 
 
-  header('Location:index.php?sucess=1');
+  header('Location:index.php?success=1');
   exit();
   ?>
