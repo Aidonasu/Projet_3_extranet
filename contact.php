@@ -9,16 +9,17 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"></script>
   </head>
   <body class="accueil">
     <header>
       <a href="index.php"><img src="logo/GBAF.png" alt="logo1"></a>
     </header>
     <main>
+      <?php if (isset($_GET['success'])): ?>
+      <div class="alert alert-dark">
+        <p>Votre mail a bien été envoyé !</p>
+      </div>
+      <?php endif; ?>
       <form class="" action="valid_contact.php" method="post">
         <div class="card border-primary mb-3">
           <div class="card-header">Nous contacter</div>
@@ -54,6 +55,5 @@
         <li><a href="contact.php" class="text-white btn btn-outline-primary">Contact</a></li>
       </ul>
     </footer>
-    <script type="text/javascript" src="js/reveal_code.js"></script>
   </body>
 </html>
