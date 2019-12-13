@@ -20,9 +20,6 @@
     </header>
     <main>
       <form class="" action="valid_change_password.php" method="post">
-        <?php if (isset($_GET['error'])): ?>
-        <p>Mauvais UserName !</p>
-        <?php endif; ?>
         <div class="card border-primary mb-3">
           <div class="card-header">Changement du mot de passe</div>
           <?php
