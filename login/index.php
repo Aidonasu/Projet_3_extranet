@@ -44,6 +44,12 @@
       <section>
         <h2>Textes acteurs et partenaires</h2>
         <?php
+
+        if (isset($_GET['error'])){?>
+        <div class="alert alert-dark">
+          <p>Cet acteur n'existe pas !</p>
+        </div>
+      <?php } 
           require_once '../config-pdo.php';
                require '../modele/pdoConnect.php';
                $query = $pdo->prepare('SELECT id_acteur,logo,acteur,description FROM acteur');
