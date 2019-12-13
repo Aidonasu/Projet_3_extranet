@@ -52,6 +52,7 @@
       <?php }
           require_once '../config-pdo.php';
                require '../modele/pdoConnect.php';
+               $pdo->exec('SET NAMES UTF8');
                $query = $pdo->prepare('SELECT id_acteur,logo,acteur,description FROM acteur');
                $query->execute();
                $results = $query->fetchall(PDO::FETCH_ASSOC);
