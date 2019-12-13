@@ -23,6 +23,6 @@
        // Envoi
        mail($to, $subject,$message, implode("\r\n", $headers));
 
-  header('Location:contact.php');
+  header('Location:contact.php?success');
   exit();
   ?>
