@@ -28,6 +28,11 @@
       </ul>
     </header>
     <main>
+      <?php if (isset($_GET['success'])): ?>
+      <div class="alert alert-dark">
+        <p>Votre mail a bien été envoyé !</p>
+      </div>
+      <?php endif; ?>
       <form class="" action="valid_contact.php" method="post">
         <div class="card border-primary mb-3">
           <div class="card-header">Nous contacter</div>
