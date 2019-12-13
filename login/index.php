@@ -2,7 +2,7 @@
   session_start();
 
   if (!isset($_SESSION['id_user']) || empty($_SESSION['id_user'])){
-  header('Location:index.php');
+  header('Location:../index.php');
   exit();
   }
   else { ?>
@@ -49,7 +49,7 @@
         <div class="alert alert-dark">
           <p>Cet acteur n'existe pas !</p>
         </div>
-      <?php } 
+      <?php }
           require_once '../config-pdo.php';
                require '../modele/pdoConnect.php';
                $query = $pdo->prepare('SELECT id_acteur,logo,acteur,description FROM acteur');
