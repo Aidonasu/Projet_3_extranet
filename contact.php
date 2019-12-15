@@ -38,7 +38,7 @@
             </p>
             <div class="form-group">
               <label for="message">Votre message</label>
-              <textarea class="form-control" id="exampleTextarea message" rows="3" name="message"></textarea>
+              <textarea class="form-control exampleTextarea" id="message" rows="3" name="message"></textarea>
             </div>
             <ul class="account center">
               <li><input id="submit" type="submit" class="btn btn-primary" value="Envoyer"></li>
