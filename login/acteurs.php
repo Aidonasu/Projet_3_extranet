@@ -42,7 +42,7 @@
       <div class="card mb-3 border-primary">
         <div class="flex_principal_acteur">
           <div class="center">
-            <img src="../logo/<?=$results['logo'];?>">
+            <img src="../logo/<?=$results['logo'];?>" alt="acteur">
           </div>
           <div class="card-body-text">
             <h3 class="card-title center"><?=$results['acteur'];?></h3>
