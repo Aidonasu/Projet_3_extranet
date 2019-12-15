@@ -26,7 +26,7 @@
           <div class="card-body">
             <p class="card-text">
               <label for="login">UserName</label>
-              <input class="form-input form-control" type="text" name="login" required>
+              <input class="form-input form-control" type="text" id="login" name="login" required>
             </p>
             <p class="card-text">
               <label for="password">Password</label>
@@ -43,15 +43,15 @@
           <div class="card-body">
             <p class="card-text">
               <label for="nom">Nom</label>
-              <input class="form-input form-control" type="text" name="nom" required>
+              <input class="form-input form-control" type="text" id="nom" name="nom" required>
             </p>
             <p class="card-text">
-              <label for="password">Prénom</label>
-              <input class="form-input form-control" type="text" name="prenom" required>
+              <label for="prenom">Prénom</label>
+              <input class="form-input form-control" type="text" id="prenom" name="prenom" required>
             </p>
             <div class="form-input form-group">
               <label for="question">Question secrète</label>
-              <select class="form-input form-select form-control" name="question" required>
+              <select class="form-input form-select form-control" id="question" name="question" required>
                 <option value="" selected>--- Selectionner une question ---</option>
                 <option value="Quel est le nom de mon premier animal domestique ?">Quel est le nom de mon premier animal domestique ?
                 <option value="Quel est le nom du pays que j’aimerais le plus visiter ?">Quel est le nom du pays que j’aimerais le plus visiter ?
@@ -64,7 +64,7 @@
             </div>
             <p class="card-text">
               <label for="reponse">Réponse</label>
-              <input class="form-input form-control" type="text" name="reponse" required>
+              <input class="form-input form-control" type="text" id="reponse" name="reponse" required>
             </p>
             <ul class="account center">
               <li><input id="submit" type="submit" class="btn btn-primary" value="Créer le compte"></li>
@@ -81,6 +81,6 @@
         <li><a href="contact.php" class="text-white btn btn-outline-primary">Contact</a></li>
       </ul>
     </footer>
-    <script type="text/javascript" src="js/reveal_code.js"></script>
+    <script src="js/reveal_code.js"></script>
   </body>
 </html>
