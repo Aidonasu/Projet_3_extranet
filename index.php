@@ -25,13 +25,13 @@
       <div class="alert alert-dark">
         <p>Votre compte a bien été créer ! Vous pouvez vous connecter !</p>
       </div>
-      <?php sleep(1);
+      <?php
         }
         elseif ($_GET['success']==2) {?>
       <div class="alert alert-dark">
         <p>Vote mot de passe a été modifié !</p>
       </div>
-      <?php sleep(1);
+      <?php
         }
         }
       if (isset($_GET['error'])): ?>
