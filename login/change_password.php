@@ -27,7 +27,7 @@
             ?>
           <div class="card-body">
             <p class="card-text">
-              <label for="user">Nouveau Password</label>
+              <label for="password">Nouveau Password</label>
               <input class="form-input form-control" type="password" name="password" id="password" required>
               <label for="checkbox">
               <input type="checkbox" id="checkbox">
@@ -49,6 +49,6 @@
         <li><a href="../contact.php" class="text-white btn btn-outline-primary">Contact</a></li>
       </ul>
     </footer>
-    <script type="text/javascript" src="../js/reveal_code.js"></script>
+    <script src="../js/reveal_code.js"></script>
   </body>
 </html>
