@@ -66,13 +66,13 @@
         <div class="alert alert-dark">
           <p>Vous avez déjà écrit un commentaire !</p>
         </div>
-        <?php sleep(1);
+        <?php
           }
           elseif ($_GET['error']==2) {?>
         <div class="alert alert-dark">
           <p>Vous avez déjà voté</p>
         </div>
-        <?php sleep(1);
+        <?php
           }
           } ?>
         <div class="card-body">
