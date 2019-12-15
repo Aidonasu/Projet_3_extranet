@@ -46,7 +46,7 @@
             <p class="card-title">Pour accéder aux information du site, renseignez votre UserName et votre Password</p>
             <p class="card-text">
               <label for="login">UserName</label>
-              <input class="form-input form-control" type="text" name="login" required>
+              <input class="form-input form-control" type="text" id="login" name="login" required>
             </p>
             <p class="card-text">
               <label for="password">Password</label>
