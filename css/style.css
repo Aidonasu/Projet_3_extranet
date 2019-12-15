@@ -213,7 +213,7 @@ div.card:nth-child(2)>p:nth-child(2) {
 	padding: 1em;
 }
 
-#exampleTextarea {
+.exampleTextarea {
 	height: 10em;
 }
 
