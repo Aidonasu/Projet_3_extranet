@@ -15,7 +15,6 @@
     //$isPasswordCorrect = password_verify($_POST['password'], $results['password']);
 
     if($user = $results['username']){
-      sleep(1);
       $id = $results['id_user'];
      header("Location:secret_question.php?id_user=$id");
       exit();
@@ -23,6 +22,7 @@
   }
   /*sinon renvoi a la page de connexion avec un message erreur*/
     else{
+      sleep(1);
       header('Location:forgot_password.php?error');
     exit();
     }

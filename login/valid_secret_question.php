@@ -16,12 +16,12 @@
     //$isPasswordCorrect = password_verify($_POST['password'], $results['password']);
 
     if($question = $results['question'] && $reponse = $results['reponse']){
-      sleep(1);
      header("Location:change_password.php?id_user=$iduser");
       exit();
     }
   }
   else {
+    sleep(1);
     header("Location:secret_question.php?id_user=$iduser&error");
     exit();
   }
