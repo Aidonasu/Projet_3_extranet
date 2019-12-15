@@ -55,15 +55,15 @@
           <div class="card-body">
             <p class="card-text">
               <label for="nom">Nom</label>
-              <input class="form-input form-control" type="text" name="nom" value="<?=$results['nom'];?>" required>
+              <input class="form-input form-control" type="text" id="nom" name="nom" value="<?=$results['nom'];?>" required>
             </p>
             <p class="card-text">
               <label for="prenom">Prénom</label>
-              <input class="form-input form-control" type="text" name="prenom" value="<?=$results['prenom'];?>" required>
+              <input class="form-input form-control" type="text" id="prenom" name="prenom" value="<?=$results['prenom'];?>" required>
             </p>
             <p class="card-text">
               <label for="username">Username</label>
-              <input class="form-input form-control" type="text" name="username" value="<?=$results['username'];?>" required>
+              <input class="form-input form-control" type="text" id="username" name="username" value="<?=$results['username'];?>" required>
             </p>
             <p class="card-text">
               <label for="password">Password</label>
@@ -75,7 +75,7 @@
             </p>
             <div class="form-input form-group">
               <label for="question">Question secrète</label>
-              <select class="form-input form-select form-control" name="question" required>
+              <select class="form-input form-select form-control" id="question" name="question" required>
                 <option value="<?=$results['question'];?>" selected>Votre question : <?=$results['question'];?></option>
                 <option value="">--- Selectionner une question ---</option>
                 <option value="Quel est le nom de mon premier animal domestique ?">Quel est le nom de mon premier animal domestique ?
@@ -89,7 +89,7 @@
             </div>
             <p class="card-text">
               <label for="reponse">Réponse</label>
-              <input class="form-input form-control" type="text" name="reponse" value="<?=$results['reponse'];?>"required>
+              <input class="form-input form-control" type="text" id="reponse" name="reponse" value="<?=$results['reponse'];?>" required>
             </p>
             <input type="hidden" name="account" value="<?=$id;?>">
             <ul class="account center">
@@ -107,7 +107,7 @@
         <li><a href="contact.php" class="text-white btn btn-outline-primary">Contact</a></li>
       </ul>
     </footer>
-    <script type="text/javascript" src="../js/reveal_code.js"></script>
+    <script src="../js/reveal_code.js"></script>
   </body>
 </html>
 <?php }
