@@ -19,7 +19,7 @@
       <a href="index.php"><img src="logo/GBAF.png" alt="logo1"></a>
     </header>
     <main>
-      <p name="sucess"><?php
+      <p><?php
         if (isset($_GET['success'])) {
           if ($_GET['success']==1) {?>
       <div class="alert alert-dark">
@@ -61,8 +61,8 @@
             <input class="btn btn-primary" type="submit" name="connexion" value="Connexion">
           </div>
           <a class="btn btn-link" href="login/forgot_password.php">Vous avez oublié votre mot de passe ?</a>
+        </div>
       </form>
-      </div>
       <div class="card border-primary mb-3">
         <div class="card-header">Première visite sur ce site ?</div>
         <div class="card-body">
