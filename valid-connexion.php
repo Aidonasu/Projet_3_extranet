@@ -19,7 +19,6 @@
     $isPasswordCorrect = password_verify($_POST['password'], $results['password']);
 
     if($isPasswordCorrect){
-      sleep(1);
       $_SESSION['prenom'] = $results['prenom'];
       $_SESSION['nom'] = $results['nom'];
       $_SESSION['id_user'] = $results['id_user'];
@@ -27,12 +26,14 @@
       exit();
     }
     else{
+    sleep(1);
     header('Location:index.php?error');
     exit();
     }
   }
   /*sinon renvoi a la page de connexion avec un message erreur*/
     else{
+    sleep(1);
     header('Location:index.php?error');
     exit();
     }
