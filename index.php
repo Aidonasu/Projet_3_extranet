@@ -80,6 +80,6 @@
         <li><a href="contact.php" class="text-white btn btn-outline-primary">Contact</a></li>
       </ul>
     </footer>
-    <script type="text/javascript" src="js/reveal_code.js"></script>
+    <script src="js/reveal_code.js"></script>
   </body>
 </html>
