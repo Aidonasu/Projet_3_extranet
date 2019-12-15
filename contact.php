@@ -26,19 +26,19 @@
           <div class="card-body">
             <p class="card-text">
               <label for="nom">Votre nom (obligatoire)</label>
-              <input class="form-input form-control" type="text" name="nom" required>
+              <input class="form-input form-control" type="text" id="nom" name="nom" required>
             </p>
             <p class="card-text">
               <label for="mail">Votre mail (obligatoire)</label>
-              <input class="form-input form-control" type="email" name="mail" required>
+              <input class="form-input form-control" type="email" id="mail" name="mail" required>
             </p>
             <p class="card-text">
               <label for="objet">Objet</label>
-              <input class="form-input form-control" type="text" name="objet">
+              <input class="form-input form-control" type="text" id="objet" name="objet">
             </p>
             <div class="form-group">
               <label for="message">Votre message</label>
-              <textarea class="form-control" id="exampleTextarea" rows="3" name="message"></textarea>
+              <textarea class="form-control" id="exampleTextarea" rows="3" id="message" name="message"></textarea>
             </div>
             <ul class="account center">
               <li><input id="submit" type="submit" class="btn btn-primary" value="Envoyer"></li>
