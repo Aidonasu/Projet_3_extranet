@@ -26,7 +26,7 @@
           <div class="card-body">
             <div class="form-input form-group">
               <label for="question">Question secrète</label>
-              <select class="form-input form-select form-control" name="question" required>
+              <select class="form-input form-select form-control" id="question" ame="question" required>
                 <option value="" selected>--- Selectionner une question ---</option>
                 <option value="Quel est le nom de mon premier animal domestique ?">Quel est le nom de mon premier animal domestique ?
                 <option value="Quel est le nom du pays que j’aimerais le plus visiter ?">Quel est le nom du pays que j’aimerais le plus visiter ?
@@ -39,7 +39,7 @@
             </div>
             <p class="card-text">
               <label for="reponse">Réponse</label>
-              <input class="form-input form-control" type="text" name="reponse" required>
+              <input class="form-input form-control" type="text" id="reponse" name="reponse" required>
             </p>
             <?php
               $id = $_GET['id_user'];
@@ -51,7 +51,6 @@
             </ul>
           </div>
         </div>
-      </form>
       </form>
     </main>
     <footer>
