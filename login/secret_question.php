@@ -26,7 +26,7 @@
           <div class="card-body">
             <div class="form-input form-group">
               <label for="question">Question secrète</label>
-              <select class="form-input form-select form-control" id="question" ame="question" required>
+              <select class="form-input form-select form-control" id="question" name="question" required>
                 <option value="" selected>--- Selectionner une question ---</option>
                 <option value="Quel est le nom de mon premier animal domestique ?">Quel est le nom de mon premier animal domestique ?
                 <option value="Quel est le nom du pays que j’aimerais le plus visiter ?">Quel est le nom du pays que j’aimerais le plus visiter ?
