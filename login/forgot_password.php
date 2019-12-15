@@ -26,7 +26,7 @@
           <div class="card-body">
             <p class="card-text">
               <label for="user">UserName</label>
-              <input class="form-input form-control" type="text" name="user" required>
+              <input class="form-input form-control" type="text" id="user" name="user" required>
             </p>
             <ul class="account center">
               <li><input type="submit" class="btn btn-primary" name="recherche" value="Rechercher"></li>
@@ -41,7 +41,6 @@
         <li><a href="../mentions_legales.php" class="text-white btn btn-outline-primary">Mentions légales</a></li>
         <li><a href="../contact.php" class="text-white btn btn-outline-primary">Contact</a></li>
       </ul>
-    </footer>
     </footer>
   </body>
 </html>
