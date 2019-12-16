@@ -4,25 +4,34 @@
   $objet = htmlspecialchars($_POST['objet']);
   $contenu = htmlspecialchars($_POST['message']);
 
-       // Plusieurs destinataires
-       $to  = 'manu_07130@hotmail.com'; // notez la virgule
 
-       // Sujet
-       $subject = $objet;
+  if (empty($nom) || empty($mail) || empty($objet) || empty($contenu)) {
+  sleep(1);
+  header('Location:contact.php?error');
+  exit();
+  }
+  else {
+  // Plusieurs destinataires
+  $to  = 'manu_07130@hotmail.com'; // notez la virgule
 
-       //Contenu
-       $message = $contenu.'<br><br>'.'De '.$nom;
+  // Sujet
+  $subject = $objet;
 
-       // Pour envoyer un mail HTML, l'en-tête Content-type doit être défini
-       $headers[] = 'MIME-Version: 1.0';
-       $headers[] = 'Content-type: text/html; charset=iso-8859-1';
+  //Contenu
+  $message = $contenu.'<br><br>'.'De '.$nom;
 
-       // En-têtes additionnels
-       $headers[] = 'From: '.$mail;
+  // Pour envoyer un mail HTML, l'en-tête Content-type doit être défini
+  $headers[] = 'MIME-Version: 1.0';
+  $headers[] = 'Content-type: text/html; charset=utf8\n';
 
-       // Envoi
-       mail($to, $subject,$message, implode("\r\n", $headers));
+  // En-têtes additionnels
+  $headers[] = 'From: '.$mail;
+
+  // Envoi
+  mail($to, $subject,$message, implode("\r\n", $headers));
 
   header('Location:contact.php?success');
   exit();
+  }
+
   ?>
