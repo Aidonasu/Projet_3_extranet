@@ -19,6 +19,11 @@
       <div class="alert alert-dark">
         <p>Votre mail a bien été envoyé !</p>
       </div>
+      <?php endif;
+        if (isset($_GET['error'])): ?>
+      <div class="alert alert-dark">
+        <p>Veuillez remplir les champs afin d'envoyer un mail valide, merci !</p>
+      </div>
       <?php endif; ?>
       <form class="" action="valid_contact.php" method="post">
         <div class="card border-primary mb-3">
