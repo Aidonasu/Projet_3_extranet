@@ -43,13 +43,19 @@
 
           if ($results['id_user'] != $_SESSION['id_user']) {
             $true_user = $_SESSION['id_user'];
-            header("Location:parametres.php?account=$true_user&error");
+            header("Location:parametres.php?account=$true_user&error=1");
           }
-              if (isset($_GET['error'])){?>
-                <div class="alert alert-dark">
-                  <p>Vous n'êtes pas autorisé à effectuer cette action !</p>
-                </div>
-          <?php } ?>
+              if (isset($_GET['error'])){
+                if ($_GET['error']==1) {?>
+                  <div class="alert alert-dark">
+                    <p>Vous n'êtes pas autorisé à effectuer cette action !</p>
+                  </div>
+                <?php }
+                elseif ($_GET['error']==2) {?>
+                  <div class="alert alert-dark">
+                    <p>Veuillez remplir tous les champs pour une modification valide, merci !</p>
+                  </div>
+          <?php } } ?>
         <div class="card border-primary mb-3">
           <div class="card-header">Paramètres du compte</div>
           <div class="card-body">
