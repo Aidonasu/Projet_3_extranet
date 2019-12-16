@@ -40,6 +40,11 @@
     </header>
     <main>
       <h2><?=$results['acteur'];?></h2>
+      <?php if (isset($_GET['error'])): ?>
+      <div class="alert alert-dark">
+        <p>Veuillez remplir le champ afin de publier un commentaire, merci !</p>
+      </div>
+    <?php endif;?>
       <form class="" action="valid_new_comment.php" method="post">
         <div class="card border-primary mb-3">
           <div class="card-header">Nouveau commentaire</div>
@@ -48,7 +53,7 @@
           </div>
           <div class="form-group form-input text_area">
             <label for="new_comment"></label>
-            <textarea class="form-control exampleTextarea" id="new_comment" rows="3" name="new_comment"></textarea>
+            <textarea class="form-control exampleTextarea" id="new_comment" rows="3" name="new_comment" required></textarea>
             <input type="hidden" name="acteurs" value="<?=$id;?>">
           </div>
           <ul class="account center area">
