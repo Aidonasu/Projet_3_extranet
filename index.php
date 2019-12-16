@@ -38,7 +38,12 @@
       <div class="alert alert-dark">
         <p>Mauvais identifiants !</p>
       </div>
-      <?php endif; ?>
+      <?php endif;
+      if (isset($_GET['connectorcreate'])): ?>
+      <div class="alert alert-dark">
+        <p>Pour accéder à cette page, connectez-vous ou créer un compte, merci !</p>
+      </div>
+      <?php endif;?>
       <form class="" action="valid-connexion.php" method="post">
         <div class="card border-primary mb-3">
           <div class="card-header">Connexion</div>
