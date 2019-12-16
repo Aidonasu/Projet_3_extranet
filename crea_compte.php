@@ -20,6 +20,11 @@
     </header>
     <main>
       <h1><i class="fas fa-university"></i> Création d'un compte utilisateur</h1>
+      <?php if (isset($_GET['error'])): ?>
+    <div class="alert alert-dark">
+      <p>Veuillez remplir les champs afin de créer un compte valide, merci !</p>
+    </div>
+    <?php endif; ?>
       <form class="generic-form champs" action="valid_creacompte.php" method="post">
         <div class="card border-primary mb-3">
           <div class="card-header">Créer un compte</div>
