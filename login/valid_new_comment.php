@@ -5,25 +5,32 @@
   $user = $_SESSION['id_user'];
   $new_comment = htmlspecialchars($_POST['new_comment']);
 
-  require_once '../config-pdo.php';
-  require '../modele/pdoConnect.php';  /* connection à la base de données */
-  $pdo->exec('SET NAMES UTF8');
-
-  $comment = $pdo->prepare("SELECT id_user,id_acteur FROM post where id_user=? and id_acteur=?");
-  $comment->execute([$user,$acteurs]);
-  $results = $comment->fetch(PDO::FETCH_ASSOC);
-
-  if ($results['id_user']) {
-    header("Location:acteurs.php?acteurs=$acteurs&error=1");
+  if (empty($new_comment)) {
+    sleep(1);
+    header("Location:new_comment_acteurs.php?acteurs=$acteurs&error");
+    exit();
   }
   else {
-    $query = $pdo->prepare("INSERT INTO post (id_user, id_acteur, date_add, post)
-    VALUES(?,?,now(),?)");
+    require_once '../config-pdo.php';
+    require '../modele/pdoConnect.php';  /* connection à la base de données */
+    $pdo->exec('SET NAMES UTF8');
 
-    $query->execute([$user,$acteurs,$new_comment]);
+    $comment = $pdo->prepare("SELECT id_user,id_acteur FROM post where id_user=? and id_acteur=?");
+    $comment->execute([$user,$acteurs]);
+    $results = $comment->fetch(PDO::FETCH_ASSOC);
 
-    header("Location:acteurs.php?acteurs=$acteurs");
-    exit();
+    if ($results['id_user']) {
+      header("Location:acteurs.php?acteurs=$acteurs&error=1");
+    }
+    else {
+      $query = $pdo->prepare("INSERT INTO post (id_user, id_acteur, date_add, post)
+      VALUES(?,?,now(),?)");
+
+      $query->execute([$user,$acteurs,$new_comment]);
+
+      header("Location:acteurs.php?acteurs=$acteurs");
+      exit();
+    }
   }
 
   ?>
