@@ -45,7 +45,7 @@
           </div>
           <div class="form-group form-input text_area">
             <label for="new_comment"></label>
-            <textarea class="form-control" id="exampleTextarea" rows="3" name="new_comment"></textarea>
+            <textarea class="form-control exampleTextarea" id="new_comment" rows="3" name="new_comment"></textarea>
             <input type="hidden" name="acteurs" value="<?=$id;?>">
           </div>
           <ul class="account center area">
