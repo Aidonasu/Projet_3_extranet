@@ -5,7 +5,18 @@
   header('Location:index.php');
   exit();
   }
-  else { ?>
+  else {
+    require_once '../config-pdo.php';
+    require '../modele/pdoConnect.php';
+    $id = $_GET['acteurs'];
+      $query = $pdo->prepare('SELECT id_acteur,acteur,description,logo FROM acteur where id_acteur = ?');
+      $query->execute([$id]);
+      $results = $query->fetch(PDO::FETCH_ASSOC);
+
+      if (!$results['id_acteur']) {
+        header("Location:index.php?error");
+     }
+    ?>
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -28,14 +39,6 @@
       </ul>
     </header>
     <main>
-      <?php
-        $id = $_GET['acteurs'];
-        require_once '../config-pdo.php';
-        require '../modele/pdoConnect.php';
-          $query = $pdo->prepare('SELECT acteur,description,logo FROM acteur where id_acteur = ?');
-          $query->execute([$id]);
-          $results = $query->fetch(PDO::FETCH_ASSOC);
-         ?>
       <h2><?=$results['acteur'];?></h2>
       <form class="" action="valid_new_comment.php" method="post">
         <div class="card border-primary mb-3">
